@@ -3,7 +3,10 @@
 from odoo import models, fields, api
 
 
-class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
 
-    quality_survey = fields.Text()
+    customer_note = fields.Text()
+    # _inherit = 'sale.order'
+
+    # quality_survey = fields.Text()
