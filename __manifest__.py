@@ -7,8 +7,8 @@
     'description': """This module adds a quality survey value to customers.    
     """,
 
-    'author': "Ehio Technologies",
-    'website': "https://www.ehiotech.com",
+    'author': "Helium",
+    'website': "https://www.helium.mx",
 
     'category': 'Sales',
     'version': '0.1',
