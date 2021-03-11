@@ -7,6 +7,3 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     customer_note = fields.Text()
-    # _inherit = 'sale.order'
-
-    # quality_survey = fields.Text()
