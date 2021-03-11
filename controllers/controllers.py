@@ -16,15 +16,15 @@ class SaleOrder(http.Controller):
         customer = json.loads(request.httprequest.data)
         #  order_id = data.get("orderId")
         #  quality_survey = data.get("quality-survey")
-
-        partner = request.env['res.partner'].sudo().create(
-            {'name':customer.get('first_name') + " " + customer.get('last_name') ,
-                'shopify_client_id': customer.get('id'),
-                'customer': True,
-                'email': customer.get('email'),
-                'phone': phone_customer,
-                'customer_note' : customer.get('note')
-            })
+        
+        if customer.get('note'):
+            partner = request.env['res.partner'].sudo().create(
+                {'name':customer.get('first_name') + " " + customer.get('last_name') ,
+                    'shopify_client_id': customer.get('id'),
+                    'customer': True,
+                    'email': customer.get('email'),
+                    'customer_note' : customer.get('note')
+                })
         
         return "created"
        
